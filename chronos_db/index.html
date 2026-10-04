@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Chronos To-Do</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+<div class="app">
+  <header>
+    <div class="header-top">
+      <div>
+        <h1>CHRONOS</h1>
+        <div class="subtitle">▸ TIME-TRAVEL TO-DO ◂</div>
+      </div>
+      <div class="header-actions">
+        <button id="soundBtn" class="icon-btn">🔔</button>
+        <button id="themeBtn" class="icon-btn">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-row"><input id="searchInput" placeholder="🔍 Search tasks..."></div>
+
+  <div class="input-row">
+    <input id="taskInput" placeholder="Enter a new task...">
+    <input id="titleInput" placeholder="Short title (optional)">
+    <input id="timeInput" type="time">
+    <select id="eraSelect">
+      <option value="today">Today</option>
+      <option value="tomorrow">Tomorrow</option>
+      <option value="week">This Week</option>
+      <option value="someday">Someday</option>
+    </select>
+    <button id="addBtn">+ Add Task</button>
+  </div>
+
+  <div class="timeline" id="timeline"></div>
+  <h3>▸ ALL TASKS</h3>
+  <ul id="taskList"></ul>
+
+  <div class="stats-bar">
+    <div><span class="stat-val" id="statStreak">0</span><label>DAY STREAK</label></div>
+    <div><span class="stat-val" id="statTotal">0</span><label>TOTAL</label></div>
+    <div><span class="stat-val" id="statDone">0</span><label>DONE</label></div>
+    <div><span class="stat-val" id="statPending">0</span><label>PENDING</label></div>
+    <div><span class="stat-val" id="statPct">0%</span><label>PROGRESS</label></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<div class="modal-bg" id="modalBg">
+  <div class="modal" id="modal">
+    <div class="modal-head">
+      <div>
+        <h2 id="modalTitle">Today</h2>
+        <div class="modal-sub" id="modalSub">0 tasks</div>
+      </div>
+      <button class="close" id="closeBtn">✕</button>
+    </div>
+    <ul id="modalList"></ul>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
